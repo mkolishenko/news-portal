@@ -5,7 +5,7 @@ namespace App\Dto;
 /**
  * Data transfer object for Post entity.
  *
- * @author Vladimir Kuprienko <vldmr.kuprienko@gmail.com>
+ *
  */
 final class Post
 {
@@ -34,8 +34,8 @@ final class Post
         return $this->description;
     }
 
-    public function getPublicationDate(): \DateTimeInterface
+    public function getPublicationDate(): string
     {
-        return $this->publicationDate;
+        return $this->publicationDate->format('d-m-Y');
     }
 }

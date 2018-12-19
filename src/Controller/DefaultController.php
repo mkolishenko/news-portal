@@ -16,9 +16,19 @@ use Symfony\Component\HttpFoundation\Response;
 
 final class DefaultController extends AbstractController
 {
-    public function index(HomePageServiceInterface $service):Response
+    /**
+     * Renders home page.
+     *
+     * @param HomePageServiceInterface $service
+     *
+     * @return Response
+     */
+    public function index(HomePageServiceInterface $service): Response
     {
         $posts = $service->getPosts();
-        return $this->render('default/index.html.twig',['posts' => '','dot' => '']);
+
+        return $this->render('default/index.html.twig', [
+            'posts' => $posts,
+        ]);
     }
 }
