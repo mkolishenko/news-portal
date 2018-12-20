@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <main class="index" role="main">
+        <div class="main-post">
+
+            <div> <em>E-mail       :</em><strong>admin@news-portal.com</strong></div>
+            <div> <em>Phone number :</em><strong>067 6767676</strong></div>
+            <div> <em>Location     :</em><strong>Kyiv </strong></div>
+            <div> <em>Will be a thankful for your feedback here:</em>
+            </div>
+
+            <div>
+            {{ form_start(form_data) }}
+            {{ form_widget(form_data) }}
+            {{ form_end(form_data) }}
+            </div>
+        </div>
+    </main>
+{% endblock %}
